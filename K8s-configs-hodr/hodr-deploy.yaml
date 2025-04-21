@@ -24,13 +24,9 @@ spec:
     spec:
       containers:
       - env:
-        - name: HTTP_PROXY
-          value: http://squid-proxy.fampay-dev.svc.cluster.local:3128
-        - name: HTTPS_PROXY
-          value: http://squid-proxy.fampay-dev.svc.cluster.local:3128
         - name: HOST_ADDR
           value: 0.0.0.0:8080
-        image: localhost/hodr-app:latest
+        image: hodr-app:latest
         imagePullPolicy: IfNotPresent
         livenessProbe:
           failureThreshold: 3
